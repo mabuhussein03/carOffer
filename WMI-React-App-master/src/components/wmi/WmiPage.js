@@ -73,9 +73,10 @@ function WmiPage(props) {
 
     }
     function handleCountryChange(value) {
+        value = value === null ? '' : value;
         setselectedCountry(value);
         search(filterText, value);
-        console.log(`selectedCountry ${selectedCountry}`);
+        console.log(`selectedCountry ${value}`);
     }
     function handlefilterChange(event) {
         // console.log(event.target.value);
